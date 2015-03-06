@@ -20,4 +20,9 @@ Galeria
 
 **Mono Come Bananas** Autor Statick
 
-.. image:: http://i.imgur.com/p3lp4Vr.png 
+.. image:: http://i.imgur.com/p3lp4Vr.png
+
+ 
+**Asteroide** Autor Statick
+
+.. image:: http://i.imgur.com/HowCkDA.png 
