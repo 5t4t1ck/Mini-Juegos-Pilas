@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import pilas
+import pilasengine
 
 '''
 Create by: @Statick_ds
@@ -10,7 +10,7 @@ Objetivo: El objetivo es que el actor mono coma bananas
 y al colisionar con las bombas explote
 
 '''
-pilas.iniciar()
+pilas = pilasengine.iniciar()
 
 pilas.fondos.Selva()
 
