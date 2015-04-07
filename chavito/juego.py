@@ -57,9 +57,9 @@ def crear_enemigo():
 
 pilas.tareas.siempre(0.5, crear_enemigo)
 
-pilas.colisiones.agregar(chavo, enemigos, chavo.eliminar)
-
 chavo = Chavo(pilas)
+
+pilas.colisiones.agregar(chavo, enemigos, chavo.eliminar)
 
 pilas.avisar(u"Usted puede mover el Chavito con el las flechas de dirección del teclado de derecha a izquierda, procure evitar el mayor número de aceitunas enemigas")
 
