@@ -81,7 +81,7 @@ pilas.tareas.siempre(0.5, crear_enemigo)
 #crear el objeto chavo
 chavo = Chavo(pilas)
 
-#Vrear la función que permite al objeto chavo comer las galletas
+#Crear la función que permite al objeto chavo comer las galletas
 def comer_pastel(chavo, enemigos):
     enemigos.eliminar()
 
