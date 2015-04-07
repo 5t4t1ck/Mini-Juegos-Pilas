@@ -14,7 +14,7 @@ class Chavo(pilasengine.actores.Actor):
 
     def iniciar(self):
 
-        self.imagen = "/data/chavo.png"
+        self.imagen = "data/chavo.png"
         self.y = -144
         self.escala = 0.9
 
