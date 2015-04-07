@@ -37,7 +37,7 @@ class Chavo(pilasengine.actores.Actor):
 class Aceituna(pilasengine.actores.Aceituna):
 
     def iniciar(self):
-        self.imagen = "data/pastel.png"
+        self.imagen = "data/galleta.png"
         self.aprender(pilas.habilidades.PuedeExplotarConHumo)
         self.x = pilas.azar(-200, 200)
         self.y = 290
