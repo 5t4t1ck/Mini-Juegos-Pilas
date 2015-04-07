@@ -4,12 +4,13 @@ pilas = pilasengine.iniciar()
 
 puntaje = pilas.actores.Puntaje(-280, 200, color = pilas.colores.blanco)
 
-class Pato(pilasengine.actores.Actor):
+class Chavo(pilasengine.actores.Actor):
     
     def iniciar(self):
         
         self.imagen = "chavo.png"
-        self.y = -139
+        self.y = -144
+        self.escala = 0.9
            
     def actualizar(self):
         
@@ -26,13 +27,7 @@ class Pato(pilasengine.actores.Actor):
         
         if self.x >= 280:
                 self.x = 280
-                           
-    def actualizar(self):
-        
-        if self.y <= 300:
-            self.eliminar()
+                
+pato = Chavo(pilas)
 
-pato = Pato(pilas)
-
-aceituna = AceitunaEnemiga(pilas)
 pilas.ejecutar()
