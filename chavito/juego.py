@@ -68,19 +68,23 @@ fondo = pilas.fondos.Galaxia(dy=-5)
 #Creando el grupo enemigos
 enemigos = pilas.actores.Grupo()
 
+#Creando la función enemigo, esta función permite crear los enemigos
 def crear_enemigo():
     actor = Galleta(pilas)
     enemigos.agreagar(actor)
 
+#Agregar la tarea de crear el enemigo cada 0.5 segundos
 pilas.tareas.siempre(0.5, crear_enemigo)
 
+#crear el objeto chavo
 chavo = Chavo(pilas)
 
+#Vrear la función que permite al objeto chavo comer las galletas
 def comer_pastel(chavo, actor):
     actor.eliminar()
 
-#pilas.colisiones.agreagar(chavo, actor, comer_pastel)
+pilas.colisiones.agreagar(chavo, actor, comer_pastel)
 
-#pilas.avisar(u"enemigas")
+pilas.avisar(u"enemigas")
 
 pilas.ejecutar()
