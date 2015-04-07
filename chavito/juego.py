@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 import pilasengine
 
 pilas = pilasengine.iniciar()
