@@ -66,8 +66,8 @@ chavo = Chavo(pilas)
 def comer_pastel(chavo, actor):
     actor.eliminar()
 
-pilas.colisiones.agreagar(chavo, actor, comer_pastel)
+#pilas.colisiones.agreagar(chavo, actor, comer_pastel)
 
-pilas.avisar(u"enemigas")
+#pilas.avisar(u"enemigas")
 
 pilas.ejecutar()
