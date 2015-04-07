@@ -1,5 +1,9 @@
 # -*- coding:utf-8 -*-
+"""
+Autor: @Statick_ds, Martin Cueva
+Objetivo del Juego: Atrapar la mayor cantidad de pasteles que caen del cielo
 
+"""
 import pilasengine
 
 pilas = pilasengine.iniciar()
@@ -10,7 +14,7 @@ class Chavo(pilasengine.actores.Actor):
 
     def iniciar(self):
 
-        self.imagen = "chavo.png"
+        self.imagen = "/data/chavo.png"
         self.y = -144
         self.escala = 0.9
 
@@ -33,7 +37,7 @@ class Chavo(pilasengine.actores.Actor):
 class Aceituna(pilasengine.actores.Aceituna):
 
     def iniciar(self):
-        self.imagen = "aceituna.png"
+        self.imagen = "data/pastel.png"
         self.aprender(pilas.habilidades.PuedeExplotarConHumo)
         self.x = pilas.azar(-200, 200)
         self.y = 290
@@ -61,7 +65,7 @@ chavo = Chavo(pilas)
 
 def choque(enemigos, chavo):
 	enemigos.eliminar()
-	
+
 pilas.colisiones.agregar(chavo, enemigos, choque)
 
 pilas.avisar(u"enemigas")
