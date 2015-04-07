@@ -63,10 +63,10 @@ pilas.tareas.siempre(0.5, crear_enemigo)
 
 chavo = Chavo(pilas)
 
-def choque(enemigos, chavo):
-	enemigos.eliminar()
+def comer_pastel(chavo, actor):
+    actor.eliminar()
 
-pilas.colisiones.agregar(chavo, enemigos, choque)
+pilas.colisiones.agreagar(chavo, actor, comer_pastel)
 
 pilas.avisar(u"enemigas")
 
