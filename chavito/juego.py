@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 """
-Autor: @Statick_ds, Martin Cueva
-Objetivo del Juego: Atrapar la mayor cantidad de galletas que caen del cielo
+Autor: Martin Cueva
+Objetivo del Juego: Atrapar la mayor cantidad de tortas de jamon que caen del cielo
 
 """
 
@@ -47,7 +47,7 @@ class Galleta(pilasengine.actores.Aceituna):
 
     #Inicializando la clase Galleta
     def iniciar(self):
-        self.imagen = "data/galleta.png"
+        self.imagen = "data/torta_de_jamon.png"
         self.aprender(pilas.habilidades.PuedeExplotarConHumo)
         self.x = pilas.azar(-200, 200)
         self.y = 290
