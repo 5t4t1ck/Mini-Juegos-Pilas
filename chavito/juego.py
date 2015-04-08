@@ -5,7 +5,7 @@ Objetivo del Juego: Atrapar la mayor cantidad de tortas de jamon que caen del ci
 
 """
 
-#Importamos la Biblioteca de Pilas-Engin
+#Importamos la Biblioteca de Pilas-Engine
 import pilasengine
 
 #Iniciando PilasEngine en un sola variable parara facilitar la programación
@@ -24,6 +24,7 @@ class Chavo(pilasengine.actores.Actor):
         self.imagen = "data/chavo.png"
         self.y = -144
         self.escala = 0.9
+    
     #Creando la función actualizar del actor chavo
     def actualizar(self):
 
@@ -34,7 +35,8 @@ class Chavo(pilasengine.actores.Actor):
 
         if self.x <= -280:
                 self.x = -280
-        #Haciendo que el actor chavo se mueva a la izquierda con la tecla izquierda
+    
+	#Haciendo que el actor chavo se mueva a la izquierda con la tecla izquierda
         if pilas.control.derecha:
             self.x += 5
             self.espejado = False
@@ -42,7 +44,7 @@ class Chavo(pilasengine.actores.Actor):
         if self.x >= 280:
                 self.x = 280
 
-#Creando la clae Galleta
+#Creando la clase Galleta
 class Galleta(pilasengine.actores.Aceituna):
 
     #Inicializando la clase Galleta
@@ -51,7 +53,7 @@ class Galleta(pilasengine.actores.Aceituna):
         self.aprender(pilas.habilidades.PuedeExplotarConHumo)
         self.x = pilas.azar(-200, 200)
         self.y = 290
-        self.velocidad = pilas.azar(10, 30)/10.0
+        self.velocidad = pilas.azar(5, 30)/10.0
 
     #Creando función actualizar
     def actualizar(self):
@@ -79,11 +81,11 @@ pilas.tareas.siempre(0.5, crear_enemigo)
 #crear el objeto chavo
 chavo = Chavo(pilas)
 
-#Vrear la función que permite al objeto chavo comer las galletas
-def comer_pastel(chavo, actor):
-    actor.eliminar()
+#Crear la función que permite al objeto chavo comer las galletas
+def comer_pastel(chavo, enemigos):
+    enemigos.eliminar()
 
-#pilas.colisiones.agreagar(chavo, actor, comer_pastel)
+#pilas.colisiones.agreagar(chavo, enemigos, comer_pastel)
 
 pilas.avisar(u"enemigas")
 
