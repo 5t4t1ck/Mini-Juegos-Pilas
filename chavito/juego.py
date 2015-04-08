@@ -57,16 +57,16 @@ class Galleta(pilasengine.actores.Aceituna):
 
     #Creando función actualizar
     def actualizar(self):
-        self.rotacion += 10
+        self.rotacion += 5
         self.y -= self.velocidad
 
         #Eliminar el objeto cuando sale de la pantalla.
         if self.y < -300:
             self.eliminar()
 
-#Agregando un fondo
-fondo = pilas.fondos.Galaxia(dy=-5)
-
+#Agregando Fondo
+fondo = pilas.fondos.Fondo()
+fondo.imagen = pilas.imagenes.cargar("data/vecindad_fondo.jpg")
 #Creando el grupo enemigos
 enemigos = pilas.actores.Grupo()
 
