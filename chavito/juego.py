@@ -76,16 +76,16 @@ def crear_enemigo():
     enemigos.agreagar(actor)
 
 #Agregar la tarea de crear el enemigo cada 0.5 segundos
-pilas.tareas.siempre(0.5, crear_enemigo)
+pilas.tareas.siempre(1, crear_enemigo)
 
 #crear el objeto chavo
 chavo = Chavo(pilas)
 
 #Crear la función que permite al objeto chavo comer las galletas
-def comer_pastel(chavo, enemigos):
-    enemigos.eliminar()
+def comer_pastel(chavo, Galleta):
+    Galleta.eliminar()
 
-#pilas.colisiones.agreagar(chavo, enemigos, comer_pastel)
+#pilas.colisiones.agreagar(chavo, Galleta, comer_pastel)
 
 pilas.avisar(u"enemigas")
 
