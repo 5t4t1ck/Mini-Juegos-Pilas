@@ -57,7 +57,7 @@ class Galleta(pilasengine.actores.Aceituna):
 
     #Creando función actualizar
     def actualizar(self):
-        self.rotacion += 10
+        self.rotacion += 5
         self.y -= self.velocidad
 
         #Eliminar el objeto cuando sale de la pantalla.
@@ -76,7 +76,7 @@ def crear_enemigo():
     enemigos.agreagar(actor)
 
 #Agregar la tarea de crear el enemigo cada 0.5 segundos
-pilas.tareas.siempre(0.5, crear_enemigo)
+pilas.tareas.siempre(1, crear_enemigo)
 
 #crear el objeto chavo
 chavo = Chavo(pilas)
